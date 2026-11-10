@@ -1,0 +1,376 @@
+
+/* General settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+    color: #1e293b;
+}
+
+
+/* Main layout */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 240px;
+    background-color: #111827;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 25px;
+    margin-bottom: 45px;
+}
+
+.logo span {
+    color: #60a5fa;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 30px;
+    color: #cbd5e1;
+}
+
+.sidebar-bottom small {
+    display: block;
+    margin-top: 8px;
+    color: #94a3b8;
+}
+
+
+/* Main content */
+
+.main-content {
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.greeting {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.subtitle {
+    color: #64748b;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+
+/* Section headings */
+
+section {
+    margin-bottom: 38px;
+    scroll-margin-top: 20px;
+}
+
+.section-title {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+/* Statistics cards */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 23px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.stat-card h2 {
+    font-size: 32px;
+    margin: 12px 0;
+    color: #2563eb;
+}
+
+.stat-card span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+
+/* Skill cards */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 23px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+}
+
+.skill-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+.progress-bar {
+    height: 9px;
+    background-color: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.blue {
+    background-color: #3b82f6;
+}
+
+.purple {
+    background-color: #8b5cf6;
+}
+
+.green {
+    background-color: #10b981;
+}
+
+.orange {
+    background-color: #f59e0b;
+}
+
+
+/* Daily tasks */
+
+.task-container {
+    background-color: white;
+    padding: 10px 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px 0;
+    border-bottom: 1px solid #e2e8f0;
+    cursor: pointer;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    padding: 20px;
+}
+
+
+/* Mobile responsive design */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .profile span {
+        display: none;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
