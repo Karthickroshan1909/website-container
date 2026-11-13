@@ -1,0 +1,21 @@
+name : docker CI workflow
+
+on:
+  push:
+      branch:
+       - main
+
+jobs:
+    docker-build:
+     runs-on: ubuntu-latest
+
+steps:
+  - name: get the source code
+    uses: actions/checkout@v4
+
+  - name: check docker version
+    run: docker --version
+
+  - name: build docker images
+    run: docker build -t web-container:v1 .
+
